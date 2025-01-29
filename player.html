@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head lang="en">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNXWL7X3R"></script>
+        <meta charset="UTF-8">
+        <title>MSX PLAYER</title>
+        <meta name="description" content="WebMSX - The online MSX emulator">
+        <script>
+            window.onload = function(){
+                //Set Tittle
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const name = urlParams.get('name') 
+                if (!name){
+                    name = ""
+                }
+                document.title = "MSX PLAYER: "+ name;
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TYNXWL7X3R');
+                
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="wmsx" style="text-align: center; margin: 20px auto 0;">
+            <div id="wmsx-screen" style="box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);"></div>
+        </div>
+
+        <script src="wmsx.js"></script>
+
+    </body>
+
+</html>

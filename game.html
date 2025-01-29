@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+    <head lang="es">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYNXWL7X3R"></script>
+        <meta charset="UTF-8">
+        <title>ANTUANSOFT - GAMES: Juego</title>
+        <meta name="Juegos MSX" content="Juego: ">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="js/games_favorites.js"></script>
+        <script src="js/games_motor.js"></script>
+        <script src="js/games_sports.js"></script>
+        <script src="js/games_strategy.js"></script>
+        <script src="js/games_war.js"></script>
+        <script src="js/games_west.js"></script>        
+        <script src="js/games_space.js"></script>
+        <script src="js/games_arcade.js"></script>
+        <script src="js/games_adventure.js"></script>
+        <script src="js/games_cinema.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/include.js"></script>
+        <script src="js/referer.js"></script>
+        <script>
+        //ShowData
+        window.onload = function(){
+                //Recupero el breadcrump en funciona de la página anterior, sino hay sigo usando el del propio juego.
+                var bcrumreferer = breadcrumbByReferer(document.referrer) 
+                if (bcrumreferer != null){
+                    breadcrumb_lv1 = bcrumreferer
+                }
+                document.title = "ANTUANSOFT - GAMES: "+ game_name;
+                document.getElementById("breadcrump_game").innerHTML = "/"+breadcrumb_name;
+                document.getElementById("breadcrump_level1").innerHTML = breadcrumb_lv1;
+                document.getElementById("game_name").innerHTML = game_name;
+                document.getElementById("game_url").href = game_player;
+                document.getElementById("image_logo").src = image_game_logo;
+                document.getElementById("image_1").src = image_game_1;
+                document.getElementById("image_2").src = image_game_2;
+                document.getElementById("image_3").src = image_game_3;
+                document.getElementById("controls").innerHTML = controls;
+                document.getElementById("description").innerHTML = description;
+                document.getElementById("trucos").innerHTML = tricks;
+                document.getElementById("game_mobile").innerHTML = game_mobile;
+                document.getElementById("image_pad").src = image_pad;
+                if (video != null){
+                    document.getElementById("video_name").innerHTML = "VIDEO";
+                    document.getElementById("game_video").innerHTML = '<iframe width="560" height="315" src="'+video+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';   
+                }
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TYNXWL7X3R');
+                includeHTML();
+        }       
+        </script>
+    </head>
+
+    <body background="background/sky-field.png">
+        <div w3-include-html="header.html"></div>
+        <div class="migas">
+            <ul>
+                <li><a href="index.html">Portada</a></li>
+                <li id="breadcrump_level1">
+                    ....
+                </li>
+                <li id="breadcrump_game">/Juego</li>
+             </ul>
+        </div>
+        <p class="titulo3" id="game_name">JUEGO</p>
+        
+        <p class="nombre_juego">Screen-shots</p>
+
+        <div class="caja_juego">
+            <span class="img-hover-zoom">
+                <img id="image_logo" class="imagen_juego " src="#"/>
+            </span>
+            <span class="img-hover-zoom">
+                <img id="image_1" class="imagen_juego" src="#"/>
+            </span>
+            <span class="img-hover-zoom">
+                <img id="image_2" class="imagen_juego" src="#"/>
+            </span>
+            <span class="img-hover-zoom">
+                <img id="image_3" class="imagen_juego" src="#"/>
+            </span>
+        </div>
+
+        <p class="nombre_juego" id="game_name">DESCRIPCION</p>
+        <p class="description" id="description"></p>
+        
+        <p class="nombre_juego">Controles </p>
+
+        <table id="controls" class="controls">
+            
+        </table>
+
+        <p class="nombre_juego" id="game_name">TRUCOS</p>
+        <p class="description" id="trucos"></p>
+   
+        <p class="nombre_juego" id="game_name">VERSION MOVIL</p>
+        <p class="description" id="game_mobile"></p>
+        <div class="caja_juego">
+            <img id="image_pad" class="imagen_juego" src="#"/>    
+        </div>        
+        <p class="nombre_juego" id="video_name"></p>
+        <p class="caja_juego" id="game_video"></p>
+        <p class="nombre_juego" id="game_name">JUGAR ONLINE</p>
+        <div class="caja_juego">
+            <a id="game_url" href="#" target="_blank">    
+                <img class="imagen_juego round_image" src="images/press_start.gif"/>
+        </div> 
+    </body>
+
+</html>
