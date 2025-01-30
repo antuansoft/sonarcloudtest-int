@@ -15,7 +15,7 @@ var pruebas = {
     const urlParams = new URLSearchParams(queryString);
     const game = urlParams.get('game') 
     if (!game){
-        game = ""
+        game = "" //cambiio
     }
     //load game variable
     var games_data = eval(game)
