@@ -13,7 +13,7 @@ var pruebas = {
     //read input parameters
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const game = urlParams.get('game') 
+    let game = urlParams.get('game') 
     if (!game){
         game = ""
     }
