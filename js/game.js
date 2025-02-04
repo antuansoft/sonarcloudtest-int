@@ -13,12 +13,12 @@ var pruebas = {
     //read input parameters
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    let game = urlParams.get('game') 
-    if (!game){
-        game = ""
+    let games = urlParams.get('game') 
+    if (!games){
+        games = ""
     }
     //load game variable
-    var games_data = eval(game) //reparar esta linea
+    var games_data = eval(games) //reparar esta linea
 
     //load data   
     var name= games_data.name;
