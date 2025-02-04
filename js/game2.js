@@ -37,4 +37,3 @@ var pruebas = {
     var tricks = games_data.tricks;
     var game_mobile = games_data.game_mobile;
     var video = games_data.video;
-
