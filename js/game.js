@@ -18,7 +18,7 @@ var pruebas = {
         game = ""
     }
     //load game variable
-    var games_data = eval(game)
+    var games_data = eval(game) //reparar esta linea
 
     //load data   
     var name= games_data.name;
